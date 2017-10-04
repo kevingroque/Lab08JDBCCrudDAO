@@ -9,18 +9,22 @@ public class Employee implements Serializable{
 	private String firstname;
 	private String lastname;
 	private double salary;
+	private int edad;
 	
-	public Employee(int id, String firstname, String lastname, double salary) {
+	public Employee(int id, String firstname, String lastname, double salary, int edad) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.salary = salary;
+		this.edad = edad;
 	}
 
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
+
+	
 
 	public int getId() {
 		return id;
@@ -53,12 +57,17 @@ public class Employee implements Serializable{
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
 
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", salary=" + salary
-				+ "]";
+				+ ", edad=" + edad + "]";
 	}
-
-
 }
